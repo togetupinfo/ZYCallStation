@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        var wsImpl = window.WebSocket || window.MozWebSocket;
+        var wsUrl = "";
+        var defaultport = '8181';
+        var localip = "";
+        $(document).ready(function () {
+
+            wsUrl = 'ws://' + location.host.split(':')[0] + ':' + defaultport + '/';
+            console.log(wsUrl);
+            createWs()
+        })
+
+        function createWs() {
+            window.ws = new wsImpl(wsUrl);
+            ws.onmessage = function (evt) {
+             
+                localip = evt.data;
+                console.log(localip);
+            };
+            // when the connection is established, this method is called
+            ws.onopen = function () {
+                // alert("open");
+
+                ws.send("ip");
+            };
+            // when the connection is closed, this method is called
+            ws.onclose = function () {
+                // alert("close");
+              
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <div>
+        <h1 style="text-align:center">叫号工作站设置</h1>
+        <div>
+          标识  <input type="text" />
+
+        </div>
+    </div>
+</body>
+</html>

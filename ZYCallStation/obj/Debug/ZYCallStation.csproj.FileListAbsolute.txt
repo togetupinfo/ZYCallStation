@@ -1,0 +1,11 @@
+D:\Documents\GitHub\ZYCallStation\ZYCallStation\bin\ZYCallStation.dll.config
+D:\Documents\GitHub\ZYCallStation\ZYCallStation\bin\ZYCallStation.dll
+D:\Documents\GitHub\ZYCallStation\ZYCallStation\bin\ZYCallStation.pdb
+D:\Documents\GitHub\ZYCallStation\ZYCallStation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Documents\GitHub\ZYCallStation\ZYCallStation\bin\Newtonsoft.Json.dll
+D:\Documents\GitHub\ZYCallStation\ZYCallStation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Documents\GitHub\ZYCallStation\ZYCallStation\bin\Newtonsoft.Json.xml
+D:\Documents\GitHub\ZYCallStation\ZYCallStation\obj\Debug\ZYCallStation.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\ZYCallStation\ZYCallStation\obj\Debug\ZYCallStation.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\ZYCallStation\ZYCallStation\obj\Debug\ZYCallStation.dll
+D:\Documents\GitHub\ZYCallStation\ZYCallStation\obj\Debug\ZYCallStation.pdb

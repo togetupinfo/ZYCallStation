@@ -138,6 +138,8 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comm\DbHelperSQL.cs" />
+    <Compile Include="Comm\Encrypt.cs" />
     <Compile Include="dbhelper.ashx.cs">
       <DependentUpon>dbhelper.ashx</DependentUpon>
     </Compile>

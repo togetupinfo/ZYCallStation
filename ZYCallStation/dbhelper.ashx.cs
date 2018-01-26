@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
+using System.Data.SqlClient;
+using Newtonsoft.Json;
 
 namespace ZYCallStation
 {
@@ -18,6 +21,13 @@ namespace ZYCallStation
                 case "getconfig":
 
                     break;
+                case "a":
+
+                    break;
+                case "b":
+
+                    break;
+
                 default:
                     break;
             }
@@ -25,11 +35,24 @@ namespace ZYCallStation
             context.Response.Write("Hello World");
         }
 
-        public string getconfig(HttpRequest httpreq) {
-            string clientip = httpreq.Params["ip"];
+        public string getconfig(HttpRequest httpreq)
+        {
+            try
+            {
 
+                string clientip = httpreq.Params["ip"];
+                string sql = "";
+                DbHelperSQL conn = new DbHelperSQL();
+                DataSet ds = conn.Query(sql);
 
-            return "";
+                return JsonConvert.SerializeObject(ds);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public bool IsReusable

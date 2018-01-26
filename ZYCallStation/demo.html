@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>示例</title>
+    
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+            function isIE() { 
+                if (!!window.ActiveXObject || "ActiveXObject" in window)
+                    return true;
+                else
+                    return false;
+            }
+        function play() {
+            
+             if ($.trim(msg.value) != "") {
+                 var webUrl = window.location.protocol + "//" + window.location.hostname;
+                 if (window.location.port) {
+                     webUrl += ":" + window.location.port;
+                 }
+                 //webUrl += "/zyTTSWeb/genwav.ashx?text=";
+                 webUrl = "http://10.68.4.29:6060/genwav/";
+                 //若是IE，则采用bgsound标签播放语音wav文件，因其兼容性好IE7以上都没有问题
+                 if (isIE()) {
+                     ifmSound.document.write("<bgsound  src='" + webUrl  + encodeURIComponent(msg.value) + "'>");
+                 } else {
+                     //非IE，则HTML5 audio来播放
+                     
+                     var audio = document.getElementById("myAudio");
+                     audio.src = webUrl + encodeURIComponent(msg.value);
+                     audio.play()
+                 }
+                 
+             } else {
+                 alert("请输入内容");
+             }
+         }
+    </script>
+
+</head>
+<body>
+    <input type="text" id="msg"/>
+    <input type="button"  onclick="play()" value="播放"　 />
+    <audio  src="#" id="myAudio"></audio>
+    <iframe id="ifmSound" src="sound.html" width="0" height="0"></iframe>
+</body>
+</html>
